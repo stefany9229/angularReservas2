@@ -1,0 +1,22 @@
+<p>register works!</p>
+
+<h1>Formularios básicos</h1>
+<form [formGroup]="signupForm"(ngSubmit)="enviar(signupForm.value)" >
+
+  <label>Nombre:</label>
+  <input formControlName="nombre" type="text" />
+  <br />
+
+  <label>Usuario:</label>
+  <input formControlName="usuario" type="text" />
+  <br />
+
+  <label>Email:</label>
+  <input formControlName="email" type="email" />
+  
+
+  <label>Contraseña:</label>
+  <input formControlName="clave" type="password" />
+  <button [disabled]="signupForm.invalid" type="submit">Registrarse</button>
+
+</form>
