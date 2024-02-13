@@ -13,10 +13,10 @@ export class RegisterComponent {
       private _builder: FormBuilder
     ) {
       this.signupForm = this._builder.group({
-        nombre: [''],
-        usuario: ['', Validators.required],
+        nombre: ['',Validators.required],
+        apellidos: ['', Validators.required],
         email: ['', Validators.compose([Validators.email, Validators.required])],
-        clave: ['', Validators.required]
+        clave: ['', Validators.compose([Validators.required, Validators.maxLength(8)])]
       });    
 
     }

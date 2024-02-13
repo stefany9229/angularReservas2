@@ -1,14 +1,18 @@
 <body>
     <div class="grid-container">
-        <header class="header">Encabezado</header>
+        <header class="header">Encabezado
+            <app-banner></app-banner>
+        </header>
         <aside class="aside">Barra Lateral
+
             <nav>
-                <a>Mis citas </a>
+                <a routerLink="./agendar-citas">agendar citas</a>
+                <a routerLink="./mis-citas">mis citas</a>
             </nav>
         </aside>
         <main class="main">Contenido Principal
             <router-outlet></router-outlet>
         </main>
-        <footer class="footer">Pie de Página</footer>
+       
     </div>
 </body>

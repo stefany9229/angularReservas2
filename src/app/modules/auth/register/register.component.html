@@ -1,22 +1,25 @@
-<p>register works!</p>
 
-<h1>Formularios básicos</h1>
-<form [formGroup]="signupForm"(ngSubmit)="enviar(signupForm.value)" >
+<div id="conteiner">
+    <h1>Registro</h1>
+    <form [formGroup]="signupForm"(ngSubmit)="enviar(signupForm.value)" >
 
-  <label>Nombre:</label>
-  <input formControlName="nombre" type="text" />
-  <br />
+    <label>Nombre:</label>
+    <input formControlName="nombre" type="text" />
+    <br />
 
-  <label>Usuario:</label>
-  <input formControlName="usuario" type="text" />
-  <br />
+    <label>Apellidos:</label>
+    <input formControlName="apellidos" type="text" />
+    <br />
 
-  <label>Email:</label>
-  <input formControlName="email" type="email" />
-  
+    <label>Email:</label>
+    <input formControlName="email" type="email" />
+        <div *ngIf="signupForm.get('email')?.hasError('required') && signupForm.get('email')?.touched" >Email is required</div>
 
-  <label>Contraseña:</label>
-  <input formControlName="clave" type="password" />
-  <button [disabled]="signupForm.invalid" type="submit">Registrarse</button>
+    
 
-</form>
+    <label>Contraseña:</label>
+    <input formControlName="clave" type="password" />
+    <button [disabled]="signupForm.invalid" type="submit">Registrarse</button>
+
+    </form>
+</div>

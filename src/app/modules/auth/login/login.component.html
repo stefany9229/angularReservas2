@@ -1,1 +1,18 @@
-<p>login works!</p>
+
+<div id="conteiner">
+    <h1>Ingresar</h1>
+    <form [formGroup]="signupForm"(ngSubmit)="enviar(signupForm.value)" >
+
+   
+    <label>Email:</label>
+    <input formControlName="email" type="email" />
+        <div *ngIf="signupForm.get('email')?.hasError('required') && signupForm.get('email')?.touched" >Email is required</div>
+
+    
+
+    <label>Contraseña:</label>
+    <input formControlName="clave" type="password" />
+    <button [disabled]="signupForm.invalid" type="submit">Registrarse</button>
+
+    </form>
+</div>

@@ -11,18 +11,13 @@ const routes: Routes = [
     path: '',
     component: HomeNoAuthComponent
   },
-  {
-    path: 'login',
-    component: LoginComponent
-  },
-  {
-    path: 'register',
-    component: RegisterComponent
-  },
+
   {
     path: 'home',
     component: HomeAuthComponent
   }
+  
+  
  
 ];
 

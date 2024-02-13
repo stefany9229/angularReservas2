@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeAuthComponent } from './home-auth/home-auth.component';
 import { AgendarCitaComponent } from '../citas/agendar-cita/agendar-cita.component';
 import { VerCitasComponent } from '../citas/ver-citas/ver-citas.component';
+import { HomeNoAuthComponent } from './home-no-auth/home-no-auth.component';
+import { LoginComponent } from '../auth/login/login.component';
+import { RegisterComponent } from '../auth/register/register.component';
 
 const routes: Routes = [
   {
@@ -20,7 +23,24 @@ const routes: Routes = [
       }
     ]
     
+  },
+  {
+    path: '',
+    component: HomeNoAuthComponent,
+    children: [
+      {
+        path: 'login',
+        component: LoginComponent
+      },
+    
+      {
+        path: 'register',
+        component: RegisterComponent
+      }
+    ]
+    
   }
+  
 ];
 
 @NgModule({
