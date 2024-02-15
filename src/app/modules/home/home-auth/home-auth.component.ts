@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class HomeAuthComponent {
 
+  usuario: any;
+
+  ngOnInit() {
+    // Obtener la cadena JSON del almacenamiento local
+    const userJson = localStorage.getItem('user');
+
+    // Convertir la cadena JSON a un objeto
+    if (userJson) {
+      this.usuario = JSON.parse(userJson);
+    }
+
+    // Ahora puedes usar los datos del usuario en tu plantilla/componente
+  }
+
 }

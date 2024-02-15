@@ -2,6 +2,12 @@
     <div class="grid-container">
         <header class="header">Encabezado
             <app-banner></app-banner>
+            <div *ngIf="usuario">
+                <h1>BIenvenid@</h1>
+                <p>{{ usuario.firstName }} {{ usuario.lastName }}</p>
+                 <p>Email: {{ usuario.email }}</p>
+                <!-- Agrega más campos según lo que tenga el objeto 'usuario' -->
+              </div>
         </header>
         <aside class="aside">Barra Lateral
 
