@@ -14,14 +14,20 @@
   .header {
     display: flex;
     height: 100px;
-    background-color: antiquewhite;
+    
     grid-column: 1 / 3;
   }
   
-
-  
-  .main {
-    background-color: darkcyan;
+  .aside {
+    background-color: crimson;
+    grid-row: 2 / 4;
   }
   
- 
+  .main {
+   
+  }
+  
+  .footer {
+    height: 100px;
+    background-color: gold;
+  }

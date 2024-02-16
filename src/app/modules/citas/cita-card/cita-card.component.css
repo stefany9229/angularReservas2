@@ -1,0 +1,43 @@
+/* Estilo general de la tarjeta */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+/* Estilo del cuerpo de la tarjeta */
+.card-body {
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+/* Estilo del título de la tarjeta */
+.card-title {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Estilo del texto de la tarjeta */
+.card-text {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Estilo del botón */
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+

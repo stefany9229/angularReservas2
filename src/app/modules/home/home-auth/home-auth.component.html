@@ -6,15 +6,26 @@
                 <h1>BIenvenid@</h1>
                 <p>{{ usuario.firstName }} {{ usuario.lastName }}</p>
                  <p>Email: {{ usuario.email }}</p>
-                <!-- Agrega más campos según lo que tenga el objeto 'usuario' -->
+                <button (click)="logout()">Cerrar sesion</button>
               </div>
         </header>
-        <aside class="aside">Barra Lateral
+        <aside class="aside">Menú
 
-            <nav>
-                <a routerLink="./agendar-citas">agendar citas</a>
-                <a routerLink="./mis-citas">mis citas</a>
-            </nav>
+            <nav id="opcionesCliente" *ngIf="hasClientRole()">
+                <p>Opciones usuario</p>
+                <ul>
+                  <li><a routerLink="./agendar-citas">agendar citas</a></li>
+                  <li><a routerLink="./mis-citas">mis citas</a></li>
+                </ul>
+              </nav>
+
+              <nav id="opcionesCliente" *ngIf="hasProfessionaltRole()">
+                <p>Opciones Profesional</p>
+                <ul>
+                  <li><a routerLink="./agendar-citas">agendar citas</a></li>
+                  <li><a routerLink="./mis-citas">mis citas</a></li>
+                </ul>
+              </nav>
         </aside>
         <main class="main">Contenido Principal
             <router-outlet></router-outlet>

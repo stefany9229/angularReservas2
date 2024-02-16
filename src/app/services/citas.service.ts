@@ -11,7 +11,7 @@ export class CitasService {
   constructor(private http: HttpClient) { }
 
   public getCitas(): Observable<Cita[]> {
-    return this.http.get<any[]>('https://run.mocky.io/v3/bb2e560a-71d7-4e99-98f5-2d62d93e5c00')
+    return this.http.get<any[]>('http://localhost:8080/api/v1/appointment/byUser')
 
 }
 }

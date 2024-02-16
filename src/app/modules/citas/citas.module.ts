@@ -4,12 +4,14 @@ import { CommonModule } from '@angular/common';
 import { CitasRoutingModule } from './citas-routing.module';
 import { VerCitasComponent } from './ver-citas/ver-citas.component';
 import { AgendarCitaComponent } from './agendar-cita/agendar-cita.component';
+import { CitaCardComponent } from './cita-card/cita-card.component';
 
 
 @NgModule({
   declarations: [
     VerCitasComponent,
-    AgendarCitaComponent
+    AgendarCitaComponent,
+    CitaCardComponent
   ],
   imports: [
     CommonModule,
