@@ -1,5 +1,13 @@
-<div *ngFor="let cita of citas">
-    
-   
+<!-- Verifica primero si el arreglo citas tiene elementos -->
+<div *ngIf="citas && citas.length; else noCitas">
+  <!-- Si citas tiene elementos, los muestra -->
+  <div *ngFor="let cita of citas">
     <app-cita-card [cita]="cita"></app-cita-card>
+    <button>Eliminar cita</button>
   </div>
+</div>
+
+<!-- Template a mostrar si citas está vacío -->
+<ng-template #noCitas>
+  <div>No tiene citas</div>
+</ng-template>

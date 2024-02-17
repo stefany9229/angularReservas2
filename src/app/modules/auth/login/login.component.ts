@@ -31,7 +31,7 @@ export class LoginComponent {
     }
   }
   enviar(values:any) {
-    console.log(this.trasnformarValores(values))
+   
     this.userService.autenticarUsuario(this.trasnformarValores(values)).subscribe(
       (response) => {
         console.log('Usuario autenticado con éxito', response);

@@ -42,22 +42,22 @@ export class UserServiceService {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       }),
-      responseType: 'text'  // Asegúrate de esperar una respuesta como texto.
+      responseType: 'text'  
     }).pipe(
       map(response => {
         try {
-          // Intenta convertir la respuesta de texto a un objeto JSON
+         
           return JSON.parse(response);
         } catch (e) {
-          // Si la respuesta no es un JSON válido, captura el error y maneja la cadena de texto
+          
           console.error('Error parsing response as JSON', e);
-          return response;  // Puedes elegir devolver la respuesta en bruto o manejar el error como prefieras
+          return response;  //
         }
       }),
       catchError(error => {
-        // Manejo de errores HTTP o de red
+        
         console.error('Error making HTTP request', error);
-        return throwError(error);  // Retorna un Observable con un error
+        return throwError(error); 
       })
     );
   }

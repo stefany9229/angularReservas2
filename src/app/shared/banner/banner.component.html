@@ -2,7 +2,14 @@
     <div class="banner">
         <div class="logo">
             <img src="../../../assets/logo.jpeg" alt="Logo de la Empresa">
+            <h1 class="company-name">Mind Guide</h1>
         </div>
-        <div class="company-name">Mind Guide</div>
+        <div></div>
+        <div class="user" *ngIf="usuario">
+            <h1>BIenvenid@</h1>
+            <p>{{ usuario.firstName }} {{ usuario.lastName }}</p>
+             <p>Email: {{ usuario.email }}</p>
+            <button >Cerrar sesion</button>
+          </div>
         
     </div>

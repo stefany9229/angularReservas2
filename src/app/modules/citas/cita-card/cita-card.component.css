@@ -28,7 +28,7 @@
 }
 
 /* Estilo del botón */
-.btn-danger {
+.btn {
     background-color: #dc3545;
     color: white;
     padding: 10px 20px;
@@ -37,7 +37,7 @@
     cursor: pointer;
 }
 
-.btn-danger:hover {
+.btn:hover {
     background-color: #c82333;
 }
 

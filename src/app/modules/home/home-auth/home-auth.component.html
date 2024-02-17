@@ -1,13 +1,8 @@
 <body>
     <div class="grid-container">
-        <header class="header">Encabezado
-            <app-banner></app-banner>
-            <div *ngIf="usuario">
-                <h1>BIenvenid@</h1>
-                <p>{{ usuario.firstName }} {{ usuario.lastName }}</p>
-                 <p>Email: {{ usuario.email }}</p>
-                <button (click)="logout()">Cerrar sesion</button>
-              </div>
+        <header class="header">
+            <app-banner [usuario]="usuario"></app-banner>
+           
         </header>
         <aside class="aside">Menú
 
@@ -22,8 +17,8 @@
               <nav id="opcionesCliente" *ngIf="hasProfessionaltRole()">
                 <p>Opciones Profesional</p>
                 <ul>
-                  <li><a routerLink="./agendar-citas">agendar citas</a></li>
-                  <li><a routerLink="./mis-citas">mis citas</a></li>
+                  <li><a routerLink="./agendar-citas">gestionar citas</a></li>
+                  
                 </ul>
               </nav>
         </aside>
