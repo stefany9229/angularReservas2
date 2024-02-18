@@ -17,7 +17,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
     CommonModule,
     HomeRoutingModule,
     CitasModule,
-    SharedModule
+    SharedModule,
+    CitasModule
   ],
   exports:[
     HomeAuthComponent,

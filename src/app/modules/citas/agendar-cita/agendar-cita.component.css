@@ -1,0 +1,50 @@
+mat-form-field{
+    width: 80%;
+}
+
+.full-width-table {
+    width: 100%;
+  }
+  
+  .mat-table {
+    width: 100%;
+  }
+  
+  .mat-header-cell, .mat-cell {
+    display: table-cell;
+    padding: 8px;
+    text-align: left;
+    line-height: 24px;
+    vertical-align: middle;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  }
+  
+  .mat-header-row, .mat-row {
+    display: table-row;
+  }
+  
+  .mat-header-row {
+    font-weight: bold;
+  }
+  
+  button.mat-raised-button {
+    margin: 4px;
+  }
+  .snack-success {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+  .snack-error {
+    background-color: #f44336;
+    color: #fff;
+  }
+  
+  
+  /* Opcional: Agrega estilos para mejorar el diseño de la tabla en pantallas pequeñas */
+  @media (max-width: 600px) {
+    .mat-cell, .mat-header-cell {
+      padding: 8px;
+    }
+  }
+  

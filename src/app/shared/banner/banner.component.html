@@ -1,15 +1,23 @@
-
+<header>
     <div class="banner">
-        <div class="logo">
-            <img src="../../../assets/logo.jpeg" alt="Logo de la Empresa">
-            <h1 class="company-name">Mind Guide</h1>
+      <div class="logo">
+        <img src="../../../assets/logo.jpeg" alt="Logo de la Empresa" />
+        <h1 class="company-name">Mind Guide</h1>
+      </div>
+      <div>
+        <div id="menu">
+          <nav *ngIf="!usuario"> <!-- Oculta el menú si hay un usuario presente -->
+            <a routerLink="/login">Login</a>
+            <a routerLink="/register">Register</a>
+          </nav>
         </div>
-        <div></div>
-        <div class="user" *ngIf="usuario">
-            <h1>BIenvenid@</h1>
-            <p>{{ usuario.firstName }} {{ usuario.lastName }}</p>
-             <p>Email: {{ usuario.email }}</p>
-            <button >Cerrar sesion</button>
-          </div>
-        
+      </div>
+      <div class="user" *ngIf="usuario">
+        <h1>BIenvenid@</h1>
+        <p>{{ usuario.firstName }} {{ usuario.lastName }}</p>
+        <p>Email: {{ usuario.email }}</p>
+        <button (click)="cerrarSesionUsuario()">Cerrar sesión</button>
+      </div>
     </div>
+  </header>
+  

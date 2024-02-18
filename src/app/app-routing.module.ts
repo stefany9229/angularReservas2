@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeAuthComponent } from './modules/home/home-auth/home-auth.component';
 import { HomeNoAuthComponent } from '../app/modules/home/home-no-auth/home-no-auth.component';
+import { GuardianSesionGuard } from './core/guards/guardian-sesion.guard';
 
 
 const routes: Routes = [
@@ -12,7 +13,7 @@ const routes: Routes = [
 
   {
     path: 'home',
-    component: HomeAuthComponent
+    component: HomeAuthComponent, canActivate: [GuardianSesionGuard]
   }
   
   

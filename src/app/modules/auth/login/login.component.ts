@@ -40,7 +40,7 @@ export class LoginComponent {
           localStorage.setItem('token', response.token);
           const userJson = JSON.stringify(response.user);
           localStorage.setItem('user', userJson);
-          this.router.navigate(['/home']);
+          this.router.navigate(['/home/agendar-citas']);
         }
       },
       (error) => {

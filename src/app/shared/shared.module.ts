@@ -1,18 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BannerComponent } from './banner/banner.component';
+import { FooterComponent } from './footer/footer/footer.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 
 @NgModule({
   declarations: [
-    BannerComponent
+    BannerComponent,
+    FooterComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AppRoutingModule
   ],
   exports: [
-    BannerComponent
+    BannerComponent,
+    FooterComponent
   ]
 })
 export class SharedModule { }

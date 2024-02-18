@@ -1,0 +1,25 @@
+/* Estilo para el mensaje de "No tienes reservas" */
+.no-citas-message {
+    font-size: 18px;
+    color: #666;
+    margin-top: 20px;
+  }
+  
+  /* Estilo para el enlace de reservar */
+  .reservar-link {
+    color: #007bff;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  /* Estilos para el Snackbar de éxito */
+.snack-success {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+  /* Estilos para el Snackbar de error */
+  .snack-error {
+    background-color: #f44336;
+    color: #fff;
+  }
+  

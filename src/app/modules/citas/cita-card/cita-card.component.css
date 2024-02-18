@@ -5,12 +5,13 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 20px 0;
     overflow: hidden;
+    background-color: #fce4ec; /* Color rosa claro */
 }
 
 /* Estilo del cuerpo de la tarjeta */
 .card-body {
     padding: 20px;
-    background-color: #f8f9fa;
+    background-color: #fff; /* Fondo blanco para el cuerpo */
 }
 
 /* Estilo del título de la tarjeta */
@@ -27,17 +28,20 @@
     margin-bottom: 10px;
 }
 
-/* Estilo del botón */
-.btn {
-    background-color: #dc3545;
-    color: white;
-    padding: 10px 20px;
+/* Estilo del botón cancelar */
+.cancelar-button {
+    background-color: #f06292; /* Color rosa intenso */
+    color: #fff; /* Texto blanco */
     border: none;
     border-radius: 4px;
+    padding: 8px 16px;
     cursor: pointer;
 }
 
-.btn:hover {
-    background-color: #c82333;
+.cancelar-button:hover {
+    background-color: #ec407a; /* Cambio de color al pasar el ratón */
 }
+
+
+
 

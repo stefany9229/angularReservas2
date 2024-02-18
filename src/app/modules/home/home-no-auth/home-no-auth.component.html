@@ -1,18 +1,13 @@
 
-
+<app-banner></app-banner>
 
     <div class="grid-container">
-        <header class="header">
-            <app-banner></app-banner>
-        </header>
-        <div id="menu">
-            <nav>
-                <a routerLink="./login">login</a>
-                <a routerLink="./register">register</a>
-            </nav>
-        </div>
+
+            
+        
         <main class="main">
             <router-outlet></router-outlet>
         </main>
-        <footer class="footer">Pie de Página</footer>
+        <app-footer></app-footer>
     </div>
+    

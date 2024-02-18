@@ -1,1 +1,49 @@
-<p>agendar-cita works!</p>
+<mat-form-field appearance="fill">
+  <mat-label>Seleccionar Profesional</mat-label>
+  <mat-select (selectionChange)="seleccionarProfesional($event.value)">
+    <mat-option
+      *ngFor="let profesional of profesionales"
+      [value]="profesional.email"
+    >
+      {{ profesional.firstName }} {{ profesional.lastName }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<div *ngIf="citasDisponibles.length > 0">
+    <table mat-table [dataSource]="citasDisponibles" class="mat-elevation-z8">
+  
+      <!-- Columna Fecha de Inicio -->
+      <ng-container matColumnDef="fechaInicio">
+        <th mat-header-cell *matHeaderCellDef>
+          Fecha de Inicio
+        </th>
+        <td mat-cell *matCellDef="let cita">
+          {{ cita.inicio | date: 'medium' }}
+        </td>
+      </ng-container>
+  
+      <!-- Columna Fecha de Fin -->
+      <ng-container matColumnDef="fechaFin">
+        <th mat-header-cell *matHeaderCellDef >
+          Fecha de Fin
+        </th>
+        <td mat-cell *matCellDef="let cita">
+          {{ cita.fin | date: 'medium' }}
+        </td>
+      </ng-container>
+  
+      <!-- Columna para Confirmar -->
+      <ng-container matColumnDef="confirmar">
+        <th mat-header-cell *matHeaderCellDef> Confirmar </th>
+        <td mat-cell *matCellDef="let cita">
+          <button mat-raised-button color="primary" (click)="agendarCita(cita)">
+            Agendar Cita
+          </button>
+        </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>

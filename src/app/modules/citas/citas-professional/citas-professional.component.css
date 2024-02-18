@@ -1,0 +1,20 @@
+#card {
+    border: 1px solid #ddd; /* Añade un borde sólido con un color gris claro */
+    border-radius: 10px; /* Añade bordes redondeados */
+    padding: 16px; /* Añade relleno dentro de la tarjeta */
+    margin: 8px 0; /* Añade un margen arriba y abajo de cada tarjeta */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil */
+    background-color: #fff; /* Establece el color de fondo de la tarjeta */
+  }
+
+  .status-active {
+    color: green;
+  }
+  
+  .status-closed {
+    color: grey;
+  }
+  
+  .status-cancelled {
+    color: red;
+  }

@@ -6,6 +6,8 @@ import { VerCitasComponent } from '../citas/ver-citas/ver-citas.component';
 import { HomeNoAuthComponent } from './home-no-auth/home-no-auth.component';
 import { LoginComponent } from '../auth/login/login.component';
 import { RegisterComponent } from '../auth/register/register.component';
+import { GuardianSesionGuard } from 'src/app/core/guards/guardian-sesion.guard';
+import { CitasProfessionalComponent } from '../citas/citas-professional/citas-professional.component';
 
 const routes: Routes = [
   {
@@ -14,12 +16,16 @@ const routes: Routes = [
     children: [
       {
         path: 'agendar-citas',
-        component: AgendarCitaComponent
+        component: AgendarCitaComponent, canActivate:[GuardianSesionGuard]
       },
     
       {
         path: 'mis-citas',
-        component: VerCitasComponent
+        component: VerCitasComponent, canActivate:[GuardianSesionGuard]
+      },
+      {
+        path: 'gestionar-citas',
+        component: CitasProfessionalComponent,canActivate:[GuardianSesionGuard]
       }
     ]
     

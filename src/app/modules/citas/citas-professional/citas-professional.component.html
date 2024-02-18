@@ -1,0 +1,17 @@
+<div *ngFor="let cita of citas" class="card">
+    <app-cita-card [cita]="cita"></app-cita-card>
+    
+    <div [ngClass]="{
+        'status-active': cita.status === 'ACTIVO',
+        'status-closed': cita.status === 'FINALIZADO',
+        'status-cancelled': cita.status === 'CANCELADO'
+       }">Estado actual: {{ cita.status }}</div>
+    <select [(ngModel)]="selectedStatuses[cita.id]" (change)="onStatusChange(cita, $event)">
+        <option value="ACTIVO">Activa</option>
+        <option value="FINALIZADO">Finalizada</option>
+        <option value="CANCELADO">Cancelada</option>
+      </select>
+     
+  </div>
+
+  

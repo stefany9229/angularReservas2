@@ -1,0 +1,11 @@
+footer {
+    
+    background-color:#f0aed0 ; /* Color de fondo rosa */
+    color:#f0f0f0; /* Color de texto blanco */
+    padding: 20px; /* Ajuste del espacio interior */
+  }
+  
+  .footer-content {
+    text-align: center; /* Centra el contenido */
+  }
+  

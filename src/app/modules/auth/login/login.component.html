@@ -1,18 +1,17 @@
 
-<div id="conteiner">
+<div id="container">
     <h1>Ingresar</h1>
-    <form [formGroup]="loginForm"(ngSubmit)="enviar(loginForm.value)" >
-
-   
-    <label>Email:</label>
-    <input formControlName="email" type="email" />
-        <div *ngIf="loginForm.get('email')?.hasError('required') && loginForm.get('email')?.touched" >Email is required</div>
-
-    
-
-    <label>Contraseña:</label>
-    <input formControlName="clave" type="password" />
-    <button [disabled]="loginForm.invalid" type="submit">Registrarse</button>
-
+    <form [formGroup]="loginForm" (ngSubmit)="enviar(loginForm.value)">
+      <label>Email:</label>
+      <input formControlName="email" type="email" />
+      <div *ngIf="loginForm.get('email')?.hasError('required') && loginForm.get('email')?.touched">Email es requerido</div>
+  
+      <label>Contraseña:</label>
+      <input formControlName="clave" type="password" />
+      <div *ngIf="loginForm.get('clave')?.hasError('required') && loginForm.get('clave')?.touched">Contraseña es requerida</div>
+  
+      <button [disabled]="loginForm.invalid" type="submit">Ingresar</button>
     </form>
-</div>
+    <p>¿No tienes una cuenta? <a routerLink="/register">Regístrate aquí</a></p>
+  </div>
+  

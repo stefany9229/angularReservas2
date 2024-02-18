@@ -61,5 +61,9 @@ export class UserServiceService {
       })
     );
   }
+
+  cerrarSesion(){
+    localStorage.clear()
+  }
     
 }

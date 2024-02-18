@@ -1,9 +1,18 @@
 <div class="card">
-    <div class="card-body">
-      <h5 class="card-title">Cita con: {{ cita?.professionalName }}  {{cita?.professionalLastName}}</h5>
-      <p class="card-text">Inicio: {{ cita?.createdAt | date:'shortDate' }} a las {{ cita?.createdAt | date:'shortTime' }}</p>
-      <p class="card-text">Fin: {{ cita?.finishTime | date:'shortDate' }} a las {{ cita?.finishTime | date:'shortTime' }}</p>
-     
-    </div>
+  <div class="card-body">
+    <h5 class="card-title">
+      Nombre del profesional: {{ cita?.professionalName }} {{ cita?.professionalLastName }}
+    </h5>
+    <h5 class="card-title">
+      Nombre del paciente: {{cita?.clientName}} {{ cita?.clientLastName }}
+    </h5>
+    <p class="card-text">Inicio: {{ cita?.startTime | date : "medium" }}</p>
+    <p class="card-text">Fin: {{ cita?.finishTime | date : "medium" }}</p>
+    <p class="card-text">
+      Fecha de registro de reserva: {{ cita?.createdAt | date : "medium" }}
+    </p>
+   
+  </div>
 </div>
-  
+
+

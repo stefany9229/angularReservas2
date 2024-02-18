@@ -6,5 +6,6 @@ export interface Cita {
     professionalLastName: string;
     status: String;
     finishTime: string;
+    startTime: string;
     createdAt: string;
   }
