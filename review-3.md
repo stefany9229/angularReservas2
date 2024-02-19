@@ -1,3 +1,6 @@
+
+Mind Guide es una aplicacion para prestar servicios de citas psicologicas
+
 Funcionalidades actuales
 Hasta este momento, nuestra aplicación incluye las siguientes funcionalidades:
 
